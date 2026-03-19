@@ -58,3 +58,5 @@ addFactBtn.onclick = () => {
     alert("Fact learned successfully! Since this is a static site (Netlify), this fact is saved locally in your browser.");
     newFactInput.value = '';
 };
+
+// Logic update 0
