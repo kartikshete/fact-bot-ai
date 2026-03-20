@@ -18,6 +18,29 @@ FactBot AI acts as a smart backend service. Built utilizing Flask, the applicati
 - Persistence: `JSON Storage`
 - Frontend View: `HTML5` templates with vanilla `CSS3`
 
+## 🏗 Architecture
+The FactBot AI application follows a monolithic architecture style with a clear separation of concerns:
+1. **Client Layer**: An HTML/CSS frontend designed to provide a clean and interactive user experience. It consumes the REST API.
+2. **API Layer (Flask)**: The `app.py` sets up a Flask server routing incoming GET and POST requests. It handles business logic, including reading from and appending to the persistence layer.
+3. **Persistence Layer**: A lightweight file-based storage mechanism using `facts.json` to store the collection of facts permanently without requiring an external database.
+
+## 📂 File Structure
+```text
+fact-bot-ai/
+├── app.py             # Flask application entry point and routing
+├── facts.json         # Data storage for all facts
+├── index.html         # Frontend HTML entry (Netlify configuration)
+├── script.js          # Client-side JavaScript logic
+├── style.css          # Core CSS styling
+├── templates/         # Flask HTML templates mapping
+├── static/            # Static assets
+├── .gitignore         # Git ignore rules
+├── LICENSE            # Project license
+├── _redirects         # Netlify redirect rules
+├── netlify.toml       # Netlify configuration file
+└── README.md          # Project documentation
+```
+
 ## 🚀 Getting Started
 
 ```bash
@@ -43,3 +66,5 @@ python app.py
 
 ## 👨‍💻 Developer
 **Kartik Shete**
+
+<!-- Doc update 3 -->
